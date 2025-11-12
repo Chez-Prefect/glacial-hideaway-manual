@@ -1,675 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glacial Hideaway - Guest Manual</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 30px rgba(0,0,0,0.2);
-        }
-        
-        header {
-            background: linear-gradient(135deg, #5DADE2 0%, #2D5016 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
-        
-        .quick-access {
-            background: #A8D8EA;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .quick-btn {
-            background: white;
-            color: #2D5016;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        
-        .quick-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        nav {
-            background: #2D5016;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            display: block;
-            transition: background 0.3s;
-        }
-        
-        nav a:hover {
-            background: #4A7C2C;
-        }
-        
-        .content {
-            padding: 40px 20px;
-        }
-        
-        section {
-            margin-bottom: 50px;
-            scroll-margin-top: 60px;
-        }
-        
-        h2 {
-            color: #2D5016;
-            font-size: 2em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #A8D8EA;
-        }
-        
-        h3 {
-            color: #5DADE2;
-            font-size: 1.5em;
-            margin: 25px 0 15px 0;
-        }
-        
-        .info-box {
-            background: #f0f8ff;
-            border-left: 5px solid #5DADE2;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        
-        .warning-box {
-            background: #fff4e6;
-            border-left: 5px solid #ff9800;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        
-        .highlight {
-            background: #A8D8EA;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-        
-        ul, ol {
-            margin-left: 25px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .card {
-            background: white;
-            border: 2px solid #A8D8EA;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.2s;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .card h4 {
-            color: #2D5016;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-        
-        .emoji {
-            font-size: 2em;
-            margin-bottom: 10px;
-            display: block;
-        }
-        
-        footer {
-            background: #2D5016;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-        
-        .contact-info {
-            background: #4A7C2C;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            
-            nav ul {
-                flex-direction: column;
-            }
-            
-            .quick-access {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Glacial Hideaway Guest Manual</title>
+
+  <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #2D5016;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    /* House Photo */
+    .hero-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #4A7C2C;
+      padding: 0.75rem;
+      text-align: center;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: #2D5016;
+      border-bottom: 2px solid #4A7C2C;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    p, li {
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    /* Contact Buttons */
+    .contact-links a {
+      display: inline-block;
+      background: #4A7C2C;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin: 0.25rem;
+    }
+    .contact-links a:hover {
+      background: #6AA64B;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2D5016;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 200;
+    }
+
+    #backToTop:hover {
+      background: #4A7C2C;
+    }
+
+    /* Responsive Design */
+    img, iframe {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+      main {
+        padding: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🏔️ Glacial Hideaway</h1>
-            <p>Your Cozy Alaskan Retreat Near Mendenhall Glacier</p>
-        </header>
-        
-        <div class="quick-access">
-            <a href="#wifi" class="quick-btn">📶 WiFi Info</a>
-            <a href="#checkin" class="quick-btn">🔑 Check-In</a>
-            <a href="#local" class="quick-btn">🗺️ Local Spots</a>
-            <a href="#contact" class="quick-btn">📞 Contact Host</a>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#welcome">Welcome</a></li>
-                <li><a href="#checkin">Check-In</a></li>
-                <li><a href="#wifi">WiFi & Heat</a></li>
-                <li><a href="#rules">House Rules</a></li>
-                <li><a href="#howto">How-To Guides</a></li>
-                <li><a href="#local">Local Guide</a></li>
-                <li><a href="#emergency">Emergency</a></li>
-                <li><a href="#checkout">Check-Out</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <div class="content">
-            <section id="welcome">
-                <h2>🏡 Welcome to Glacial Hideaway!</h2>
-                <p><strong>Hey there, Alaska adventurer!</strong></p>
-                
-                <p>Welcome to our cozy home nestled in the heart of Juneau, where the glacier meets the forest and eagles soar overhead. We're thrilled you chose Glacial Hideaway for your Alaskan getaway!</p>
-                
-                <p>Our home sits within walking distance of Mendenhall Campground and just minutes from the stunning Mendenhall Glacier. Whether you're here in the snowy winter months or the endless-daylight summer, you've got adventure right at your doorstep.</p>
-                
-                <div class="highlight">
-                    <h3>What Makes This Place Special:</h3>
-                    <ul>
-                        <li>🏔️ <strong>Walking distance to Mendenhall Campground</strong></li>
-                        <li>❄️ <strong>Winter: Ski out the back gate to groomed Nordic trails!</strong></li>
-                        <li>☀️ <strong>Summer: Easy lake access and trail exploration</strong></li>
-                        <li>🐕 <strong>Fully fenced yard</strong> - perfect for your furry friends</li>
-                        <li>🍳 <strong>Fully loaded kitchen with double ovens</strong></li>
-                        <li>🎿 <strong>Ski storage in garage</strong> for winter gear</li>
-                        <li>🦅 <strong>Eagles, ravens, and Alaska wildlife all around</strong></li>
-                        <li>🏠 <strong>2 bedrooms, 2 bathrooms, sleeps up to 6 guests</strong></li>
-                    </ul>
-                </div>
-                
-                <p>Whether you're here to hike mountain trails, ski groomed loops on the frozen lake, spot humpback whales, or simply unwind in nature's peace and quiet, we want you to feel right at home. Think of us as your Juneau neighbors — we're here if you need anything!</p>
-            </section>
-            
-            <section id="checkin">
-                <h2>🔑 Check-In Instructions</h2>
-                
-                <div class="info-box">
-                    <h3>Arrival Details</h3>
-                    <p><strong>Check-in time:</strong> 3:00 PM<br>
-                    <strong>Check-out time:</strong> 12:00 PM (Noon)</p>
-                </div>
-                
-                <h3>Finding Your Way In</h3>
-                <ol>
-                    <li><strong>Parking:</strong> Pull into the driveway — there's room for your vehicle</li>
-                    <li><strong>Locate the key box:</strong> You'll find it mounted near the front door</li>
-                    <li><strong>Entry code:</strong> Your unique access code will be provided in your check-in message from Autumn</li>
-                    <li><strong>Open the key box</strong> and retrieve the house key</li>
-                    <li><strong>Let yourself in</strong> and make yourself at home!</li>
-                </ol>
-                
-                <div class="warning-box">
-                    <strong>⚠️ Important Notes:</strong>
-                    <ul>
-                        <li>The shed is <strong>not for guest use</strong>. The garage is accessible.</li>
-                        <li>Please use only the front door key box for entry</li>
-                        <li>Leave the key in the key box when you depart</li>
-                    </ul>
-                </div>
-                
-                <h3>What to Expect When You Arrive</h3>
-                <ul>
-                    <li>Heat will be set to a comfortable temperature</li>
-                    <li>Welcome info on the kitchen counter</li>
-                    <li><strong>Boots off at the entry, please!</strong> Alaska's beautiful but muddy - boot tray is right inside</li>
-                    <li>Don't be startled if you spot a bald eagle in the spruce trees — they're our neighborhood watch!</li>
-                </ul>
-                
-                <div class="info-box">
-                    <strong>🌞 Daylight Heads-Up:</strong> The sun sets around 3:30 PM in winter and barely sets at all in summer. Those blackout curtains in the bedrooms are your friend during midnight sun season (May-July)!
-                </div>
-            </section>
-            
-            <section id="wifi">
-                <h2>📶 WiFi & Staying Comfortable</h2>
-                
-                <div class="highlight">
-                    <h3>Get Connected</h3>
-                    <p><strong>WiFi Network:</strong> Luci's<br>
-                    <strong>Password:</strong> pray4snow</p>
-                </div>
-                
-                <p><em>Pro tip: Cell service can be spotty in some glacier areas, so download offline maps before heading out on adventures!</em></p>
-                
-                <h3>🔥 Staying Warm & Cozy</h3>
-                
-                <div class="info-box">
-                    <h4>Heat Pump (Main Heating System)</h4>
-                    <ul>
-                        <li>Controlled by a <strong>remote control</strong> (look for it in the living room)</li>
-                        <li>Use the remote to adjust temperature and fan speed</li>
-                        <li>This heats the main living areas efficiently</li>
-                        <li>Give it 15-20 minutes to adjust to your desired temperature</li>
-                    </ul>
-                    
-                    <h4>Space Heaters (Bedrooms)</h4>
-                    <ul>
-                        <li>Each bedroom has its own space heater</li>
-                        <li>Simply turn them on at night if you want extra warmth</li>
-                        <li>Control knobs are on the units themselves</li>
-                        <li><strong>Safety first:</strong> Keep them away from curtains and bedding</li>
-                    </ul>
-                </div>
-                
-                <h3>🏠 Where to Find Things</h3>
-                <ul>
-                    <li>🛏️ <strong>Extra linens & blankets:</strong> Hallway closet</li>
-                    <li>🧴 <strong>Toiletries:</strong> Under bathroom sinks (shampoo, soap, first aid basics)</li>
-                    <li>🧹 <strong>Cleaning supplies:</strong> Under kitchen sink</li>
-                    <li>☕ <strong>Coffee & tea:</strong> Counter near fridge (help yourself!)</li>
-                    <li>🐕 <strong>Dog bowls & toys:</strong> Box in the mudroom/entry area</li>
-                    <li>🔦 <strong>Flashlight & candles:</strong> Kitchen drawer (power outages can happen in storms)</li>
-                    <li>🧊 <strong>Ice melt for steps:</strong> Front closet (winters get slippery!)</li>
-                </ul>
-            </section>
-            
-            <section id="rules">
-                <h2>📋 House Rules (The Friendly Version)</h2>
-                
-                <p>We want you to relax and enjoy, but a few guidelines help keep this place special for everyone:</p>
-                
-                <div class="grid">
-                    <div class="card">
-                        <span class="emoji">🤫</span>
-                        <h4>Quiet Hours</h4>
-                        <p>10 PM - 8 AM. Our neighbors are lovely people who appreciate the peace (and they'll give you great bear sighting updates if you chat with them!).</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">🐾</span>
-                        <h4>Pets Welcome!</h4>
-                        <p>Well-behaved dogs are welcome! Please keep them off furniture and beds, clean up after them in the fenced yard, and let us know when booking.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">🚭</span>
-                        <h4>No Smoking Inside</h4>
-                        <p>Smoke outside only, please. We appreciate your cooperation!</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">👢</span>
-                        <h4>Muddy Boots Stay Outside</h4>
-                        <p>Trust us, Alaska will get on your shoes. Boot tray and bench are right inside the door — future you will thank present you.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">🧹</span>
-                        <h4>Before You Leave</h4>
-                        <p>Just tidy up, run the dishwasher, and leave things roughly how you found them. Our cleaning crew handles the rest!</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">👥</span>
-                        <h4>Guest Maximum</h4>
-                        <p>This home comfortably sleeps up to 6 guests. Please respect this limit for everyone's comfort and safety.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="howto">
-                <h2>🛠️ How-To Guides</h2>
-                
-                <h3>🍳 Kitchen Essentials</h3>
-                <div class="info-box">
-                    <p><strong>Double Ovens:</strong> Upper and lower ovens work independently. Dials on the front control each oven separately. Perfect for cooking multiple dishes!</p>
-                    <p><strong>Coffee Maker:</strong> K-cup style pods provided. Fill water reservoir, pop in a pod, and press brew.</p>
-                    <p><strong>Dishwasher:</strong> Detergent pods are under the sink. Load dishes, add pod to dispenser, close firmly, and press "Normal Wash."</p>
-                    <p><strong>Stovetop:</strong> Electric coils take a minute to heat and cool — be patient and plan ahead.</p>
-                </div>
-                
-                <h3>♻️ Trash & Recycling</h3>
-                <div class="warning-box">
-                    <p><strong>Trash Collection:</strong> Bins are on the side of the house.</p>
-                    <p><strong>What Goes Where:</strong></p>
-                    <ul>
-                        <li><strong>Black bin (Trash):</strong> General waste</li>
-                        <li><strong>Blue bin (Recycling):</strong> Clean plastic (#1-7), cardboard, paper, glass, metal cans — please rinse items first</li>
-                    </ul>
-                    <p><strong>⚠️ Bear Safety:</strong> In summer, only put bins out the morning of pickup. Bears are active and WILL raid your trash. They're surprisingly good at opening things!</p>
-                </div>
-                
-                <h3>🎿 Winter: Ski Storage</h3>
-                <div class="info-box">
-                    <p>During winter months, you can store skis, poles, boots, and winter gear in the designated area of the garage. This keeps your equipment dry and ready for the next adventure!</p>
-                </div>
-            </section>
-            
-            <section id="local">
-                <h2>🗺️ Local Recommendations</h2>
-                <p><em>Your neighbor's favorite spots — tested and loved!</em></p>
-                
-                <h3>❄️ WINTER MAGIC: Ski Right from Your Back Gate!</h3>
-                <div class="highlight">
-                    <p><strong>One of the most unique features of Glacial Hideaway:</strong> When there's snow on the ground and the lake freezes over (typically late December through March), you can ski out the back gate and be on groomed Nordic trails in just 2 minutes!</p>
-                    
-                    <p><strong>What's Available:</strong></p>
-                    <ul>
-                        <li>🎿 <strong>Groomed trails at Mendenhall Lake Campground</strong> - Perfect for cross-country and skate skiing</li>
-                        <li>⛸️ <strong>Lake loop on frozen Mendenhall Lake</strong> - Usually groomed for skating and skiing</li>
-                        <li>🚶 <strong>Walking distance from your back gate</strong> - No driving needed!</li>
-                    </ul>
-                    
-                    <div class="warning-box">
-                        <p><strong>⚠️ Important:</strong> Winter trail conditions are weather-dependent. Please check local conditions during your stay or ask us! There are no warming facilities at the campground, but you'll have our cozy house to return to.</p>
-                    </div>
-                    
-                    <p><strong>Need to Rent Skis?</strong></p>
-                    <p><strong>Foggy Mountain Shop</strong> - Downtown Juneau<br>
-                    Your go-to for Nordic ski rentals (skis, boots, poles). The staff are incredibly knowledgeable about current trail conditions and can give you great advice. About 15 minutes from the house.</p>
-                </div>
-                
-                <h3>🥾 OUTDOOR ADVENTURES (Year-Round)</h3>
-                
-                <div class="grid">
-                    <div class="card">
-                        <h4>Mendenhall Glacier Visitor Center</h4>
-                        <p><strong>Distance:</strong> 5 minutes by car</p>
-                        <p>The star of the show! Walk to viewing platforms, visit the center, or hike trails. Nugget Falls trail is an easy 2-mile round trip with jaw-dropping glacier views.</p>
-                        <p>📍 <em>6000 Glacier Spur Rd</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>West Glacier Trail</h4>
-                        <p><strong>Difficulty:</strong> Moderate | <strong>Distance:</strong> 3.4 miles</p>
-                        <p>Gets you RIGHT up to the glacier edge. Absolutely stunning. Start early to beat crowds. Can be icy — bring traction cleats in spring/fall.</p>
-                        <p>📍 <em>Trailhead off Montana Creek Rd</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Montana Creek Trail</h4>
-                        <p><strong>Minutes from the house!</strong> Great for hiking in summer and a popular fishing hole. Ask us for specifics — it's right in your backyard.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Perseverance Trail</h4>
-                        <p><strong>Difficulty:</strong> Moderate to Difficult | <strong>Distance:</strong> 3-12 miles</p>
-                        <p>Historic mining trail with waterfalls, old equipment, and mountain views. Goes up the valley — you choose how far. Muddy after rain!</p>
-                        <p>📍 <em>Trailhead at end of Basin Rd, downtown Juneau</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Mount Roberts Tramway</h4>
-                        <p>Take the tram up 1,800 feet for incredible views of the channel, Douglas Island, and mountains. Restaurant and nature center at top. Hiking trails if you're ambitious!</p>
-                        <p>📍 <em>490 S Franklin St, downtown</em> | $40 adult</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Auke Bay</h4>
-                        <p>Quiet beach area perfect for tide pooling, eagle watching, and sunset views. Sometimes you'll spot seals or even whales from shore. Bring binoculars!</p>
-                        <p>📍 <em>Auke Bay Recreation Area</em></p>
-                    </div>
-                </div>
-                
-                <h3>☕ LOCAL EATS & DRINKS</h3>
-                
-                <div class="grid">
-                    <div class="card">
-                        <h4>Sandpiper Café ☕</h4>
-                        <p>Our go-to breakfast spot. Killer omelets, real sourdough, and coffee that prepares you for a glacier hike.</p>
-                        <p>📍 <em>429 W Willoughby Ave</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>The Hangar on the Wharf 🍺</h4>
-                        <p>Waterfront views with floatplanes landing outside. Great halibut fish & chips and local beers.</p>
-                        <p>📍 <em>2 Marine Way, downtown</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Devil's Club Brewing Co. 🍻</h4>
-                        <p>Juneau's craft brewery with creative Alaskan-inspired beers. Try the Panhandle Pale!</p>
-                        <p>📍 <em>1002 Anka St</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Tracy's King Crab Shack 🦀</h4>
-                        <p>Touristy? Yes. Worth it? Also yes. Grab king crab legs and eat outside. Cash only!</p>
-                        <p>📍 <em>406 S Franklin St, downtown</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Island Pub 🍔</h4>
-                        <p>Locals' spot on Douglas Island. Solid burgers, chill vibe, actually affordable. Trivia Tuesday nights!</p>
-                        <p>📍 <em>1102 2nd St, Douglas</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Heritage Coffee ☕</h4>
-                        <p>Best coffee in Juneau. Locally roasted. Grab a bag to take home!</p>
-                        <p>📍 <em>174 S Franklin St</em></p>
-                    </div>
-                </div>
-                
-                <h3>🛒 ESSENTIALS & SUPPLIES</h3>
-                
-                <ul>
-                    <li><strong>Safeway</strong> (Full grocery) - 3033 Vintage Blvd | Open until 11 PM - Has everything including firewood and camping supplies</li>
-                    <li><strong>Fred Meyer</strong> (Everything store) - 8181 Glacier Hwy - Groceries, camping gear, clothes, pharmacy</li>
-                    <li><strong>IGA Foodland</strong> (Local grocery) - 615 Willoughby Ave - Great meat and seafood counter, locally-owned</li>
-                    <li><strong>Nugget Mall</strong> - 8745 Glacier Hwy - Small mall with Safeway inside plus shops</li>
-                </ul>
-                
-                <h3>🦅 WILDLIFE & SCENIC SPOTS</h3>
-                
-                <div class="card">
-                    <h4>Eagle Beach</h4>
-                    <p><strong>25 min drive north</strong></p>
-                    <p>Best place to see bald eagles, especially late fall during salmon runs. Bring a camera with zoom lens!</p>
-                    <p>📍 <em>Mile 28 Glacier Hwy</em></p>
-                </div>
-                
-                <div class="card">
-                    <h4>Macaulay Salmon Hatchery</h4>
-                    <p>See salmon runs and learn about Alaska fisheries. Seals and bears sometimes wait outside for lunch!</p>
-                    <p>📍 <em>2697 Channel Dr</em></p>
-                </div>
-                
-                <div class="card">
-                    <h4>Whale Watching Tours</h4>
-                    <p>Several companies run tours from downtown docks (May-Sept). You'll see humpbacks feeding — it's unreal.</p>
-                </div>
-            </section>
-            
-            <section id="emergency">
-                <h2>🚨 Emergency Information</h2>
-                
-                <div class="warning-box">
-                    <h3>Immediate Emergencies</h3>
-                    <p><strong>Call 911</strong> for police, fire, or medical emergencies</p>
-                </div>
-                
-                <div class="grid">
-                    <div class="card">
-                        <h4>🏥 Bartlett Regional Hospital</h4>
-                        <p>Main Emergency Room</p>
-                        <p>📍 3260 Hospital Dr, Juneau<br>
-                        📞 (907) 796-8900<br>
-                        <em>10 minutes from the house</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>🩺 Juneau Urgent & Family Care</h4>
-                        <p>For non-emergencies</p>
-                        <p>📍 8505 Old Dairy Rd<br>
-                        📞 (907) 790-4111<br>
-                        <em>Walk-ins welcome, 9 AM - 9 PM daily</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>💊 24-Hour Pharmacy</h4>
-                        <p>Safeway Pharmacy<br>
-                        📍 3033 Vintage Blvd<br>
-                        📞 (907) 789-0231</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>⚡ Power Outages</h4>
-                        <p>Alaska Electric Light & Power<br>
-                        📞 (907) 463-3000<br>
-                        <em>Flashlights in kitchen drawer</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>🐻 Wildlife Encounters</h4>
-                        <p>Alaska Wildlife Troopers<br>
-                        📞 (907) 465-4000<br>
-                        <em>If you see a bear near the house, stay inside and call</em></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>🚔 Non-Emergency Police</h4>
-                        <p>Juneau Police Department<br>
-                        📞 (907) 586-0600</p>
-                    </div>
-                </div>
-                
-                <div class="info-box">
-                    <h4>Other Important Numbers</h4>
-                    <ul>
-                        <li><strong>Road Conditions:</strong> Dial 511 or visit 511.alaska.gov</li>
-                        <li><strong>Poison Control:</strong> 1-800-222-1222</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <section id="checkout">
-                <h2>✅ Check-Out Instructions</h2>
-                
-                <p><strong>Check-out time: 12:00 PM (Noon)</strong></p>
-                
-                <p>We keep it simple! Our cleaning crew is coming, so don't stress about deep cleaning. Just help us out with these basics:</p>
-                
-                <div class="grid">
-                    <div class="card">
-                        <span class="emoji">🧺</span>
-                        <h4>Linens & Towels</h4>
-                        <p>Toss used towels in the bathroom hamper. You can strip beds or leave sheets on — your choice!</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">🍽️</span>
-                        <h4>Dishes</h4>
-                        <p>Please load the dishwasher and press 'Start'. If it's a small load, hand wash and dry a few items if possible.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">🗑️</span>
-                        <h4>Trash</h4>
-                        <p>Take out all kitchen/bathroom trash and recycling to the outside bins on the side of the house.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <span class="emoji">🔒</span>
-                        <h4>Final Security</h4>
-                        <p>Turn off all lights, check that windows are closed, and place the key back in the front key box.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="contact">
-                <h2>📞 Contact the Host</h2>
-                
-                <p>Have a question about the area or a minor issue with the house? Please reach out!</p>
-                
-                <div class="contact-info">
-                    <h3>Host/Property Manager: Autumn</h3>
-                    <p><strong>Preferred Contact:</strong> Text message</p>
-                    <p><strong>Mobile Number:</strong> (907) 555-1234</p>
-                    <p><strong>Email:</strong> autumn@glacialhideaway.com</p>
-                    <p><em>We strive to respond within 30 minutes for non-emergency issues.</em></p>
-                </div>
-            </section>
-            
-        </div> <footer>
-            <p>&copy; Glacial Hideaway Guest Manual. Enjoy your Alaskan Adventure!</p>
-            <p>Thank you for staying with us, and we hope to welcome you back soon.</p>
-        </footer>
-        
-    </div> </body>
+
+  <header>
+    <h1>The Glacial Hideaway</h1>
+    <p>Welcome to your peaceful retreat near the Mendenhall Glacier!</p>
+  </header>
+
+  <!-- House Photo -->
+  <img src="house.jpeg" alt="The Glacial Hideaway cabin exterior" class="hero-image">
+
+  <nav>
+    <a href="#checkin">Check-In</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#wifi">WiFi</a>
+    <a href="#trash">Trash</a>
+    <a href="#checkout">Check-Out</a>
+    <a href="#local">Local Tips</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="checkin">
+      <h2>Check-In</h2>
+      <p>Check-in is at <strong>4:00 PM</strong>. The door code will be sent to you before arrival.</p>
+    </section>
+
+    <section id="amenities">
+      <h2>Amenities</h2>
+      <ul>
+        <li>Fully equipped kitchen</li>
+        <li>Smart TV</li>
+        <li>Heating and air conditioning</li>
+        <li>Washer and dryer</li>
+      </ul>
+    </section>
+
+    <section id="wifi">
+      <h2>WiFi</h2>
+      <p>Network: <strong>GlacialGuest</strong><br>
+      Password: <strong>welcome2Juneau</strong></p>
+    </section>
+
+    <section id="trash">
+      <h2>Trash & Recycling</h2>
+      <p>Trash pickup is on <strong>Monday</strong>. Please place bins at the end of the driveway Sunday night.</p>
+    </section>
+
+    <section id="checkout">
+      <h2>Check-Out</h2>
+      <ul>
+        <li>Check-out is at <strong>10:00 AM</strong>.</li>
+        <li>Please start the dishwasher and take out trash.</li>
+        <li>Leave used towels in the bathroom.</li>
+      </ul>
+    </section>
+
+    <section id="local">
+      <h2>Local Recommendations</h2>
+      <ul>
+        <li><strong>Mendenhall Glacier Visitor Center</strong> – 10 min drive</li>
+        <li><strong>Nugget Falls Trail</strong> – Easy scenic hike</li>
+        <li><strong>Sandpiper Café</strong> – Great local breakfast</li>
+        <li><strong>The Hangar on the Wharf</strong> – Dinner with a view</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For any questions or issues during your stay, please contact us anytime.</p>
+      <div class="contact-links">
+        <a href="tel:+19075551234">📞 Call</a>
+        <a href="sms:+19075551234">💬 Text</a>
+        <a href="mailto:glacialhideaway@gmail.com">✉️ Email</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">⬆️</button>
+
+  <script>
+    const topBtn = document.getElementById('backToTop');
+    window.onscroll = () => topBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+    topBtn.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+  </script>
+
+</body>
 </html>
